@@ -1,0 +1,275 @@
+body {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%), 
+              url('https://fsi9-prod.s3.us-west-1.amazonaws.com/s3fs-public/styles/680x378_x2/public/2025-01/sipr2024_elections_1.png?itok=ioJiy996') center center/cover no-repeat fixed;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #667eea !important;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #667eea !important;
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #667eea;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-title {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.btn-success {
+  background: linear-gradient(45deg, #56ab2f, #a8e6cf);
+  box-shadow: 0 4px 15px rgba(86, 171, 47, 0.4);
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(86, 171, 47, 0.6);
+}
+
+.btn-outline-secondary {
+  border: 2px solid #6c757d;
+  color: #6c757d;
+  background: transparent;
+}
+
+.btn-outline-secondary:hover {
+  background: #6c757d;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  transform: scale(1.02);
+}
+
+.form-select {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  transform: scale(1.02);
+}
+
+.alert {
+  border-radius: 10px;
+  border: none;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.table {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table thead th {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 15px;
+}
+
+.table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background: rgba(102, 126, 234, 0.1);
+  transform: scale(1.01);
+}
+
+.list-group-item {
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.list-group-item:hover {
+  background: rgba(102, 126, 234, 0.1);
+  transform: translateX(5px);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.loading::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #5a6fd8, #6a4190);
+}
